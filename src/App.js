@@ -24,7 +24,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-	  CommitId: $Id$ 
+	      CommitId: $Id$ 
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
