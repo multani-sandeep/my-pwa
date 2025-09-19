@@ -26,6 +26,7 @@ function App() {
 	 			applicationServerKey: "BMPstOfOA-L8A6NEM3-MSXHk3sBYj2hm8RSaCI_pUCkb7iFg3FuhDJRIUmPh9k2o__yqbLQAFonjNHp1k0PIjec"
 	 		});
 	 		console.log(subscription);
+			console.log(subscription.toJSON());
 	         return subscription;
 	     }
 	
