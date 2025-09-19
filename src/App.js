@@ -19,12 +19,23 @@ function App() {
        }
      };
 	 
+	 const subscribeUser = async () =>{
+	         const registration = await navigator.serviceWorker.ready;
+	 		const subscription = registration.pushManager.subscribe({
+	 			userVisibleOnly: true,
+	 			applicationServerKey: "BMPstOfOA-L8A6NEM3-MSXHk3sBYj2hm8RSaCI_pUCkb7iFg3FuhDJRIUmPh9k2o__yqbLQAFonjNHp1k0PIjec"
+	 		});
+	 		console.log(subscription);
+	         return subscription;
+	     }
+	
+	 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-	      CommitId: $Id$ 
+	  
+        <p> Test1<br/>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
@@ -34,9 +45,18 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
-      </header>
+        </a><br/>
    <button
+          style={{
+            padding: "10px 20px",
+            fontSize: "16px",
+            borderRadius: "8px",
+            cursor: "pointer",
+          }}
+          onClick={subscribeUser}
+        >
+          Subscribe user
+        </button><button
           style={{
             padding: "10px 20px",
             fontSize: "16px",
@@ -46,7 +66,9 @@ function App() {
           onClick={requestNotificationPermission}
         >
           Enable Notifications
-        </button>
+        </button>		  
+      </header>
+   
     </div>
   );
 }
