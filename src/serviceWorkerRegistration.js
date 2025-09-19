@@ -135,3 +135,28 @@ export function unregister() {
       });
   }
 }
+
+// Request notification permission
+async function subscribeUser() {
+  const permission = await Notification.requestPermission();
+  if (permission !== "granted") {
+    console.warn("Notification permission not granted");
+    return;
+  }
+
+  // Register service worker
+  // const registration = await navigator.serviceWorker.register("/service-worker.js");
+  
+  // Subscribe to push
+  const subscription = await registration.pushManager.subscribe({
+    userVisibleOnly: true,
+    applicationServerKey: "BMPstOfOA-L8A6NEM3-MSXHk3sBYj2hm8RSaCI_pUCkb7iFg3FuhDJRIUmPh9k2o__yqbLQAFonjNHp1k0PIjec"
+  });
+
+  // Send subscription to your backend
+  await fetch("/api/save-subscription", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(subscription)
+  });
+}

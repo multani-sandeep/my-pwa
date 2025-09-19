@@ -70,3 +70,13 @@ self.addEventListener('message', (event) => {
 });
 
 // Any other custom service worker logic can go here.
+self.addEventListener("push", event => {
+  const data = event.data ? event.data.json() : {};
+  const title = data.title || "PWA Push message";
+  const options = {
+    body: data.body,
+    icon: "/logo192.png",
+    badge: "/logo192.png"
+  };
+  event.waitUntil(self.registration.showNotification(title, options));
+});
