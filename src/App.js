@@ -39,6 +39,7 @@ function App() {
 			       badge: "/logo192.png"
 			     };
 				 registration.showNotification(title, options);
+				 window.Notification(title, options);
 		     }
 	
 	 
