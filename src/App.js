@@ -29,6 +29,17 @@ function App() {
 			console.log(subscription.then(function(subscription){console.log(subscription.toJSON());}));
 	         return subscription;
 	     }
+		 
+		 const sendNotification = async () =>{
+		         const registration = await navigator.serviceWorker.ready;
+			     const title = "Push title from button";
+			     const options = {
+			       body: "Push body from button",
+			       icon: "/logo192.png",
+			       badge: "/logo192.png"
+			     };
+				 registration.showNotification(title, options);
+		     }
 	
 	 
   return (
@@ -67,7 +78,18 @@ function App() {
           onClick={requestNotificationPermission}
         >
           Enable Notifications
-        </button>		  
+        </button>	
+		<button
+          style={{
+            padding: "10px 20px",
+            fontSize: "16px",
+            borderRadius: "8px",
+            cursor: "pointer",
+          }}
+          onClick={sendNotification}
+        >
+          Send local Push notification
+        </button>	  	  
       </header>
    
     </div>
