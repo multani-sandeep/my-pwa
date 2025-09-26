@@ -1,0 +1,154 @@
+{
+	"_v": "21.3",
+	"_type": "category",
+	"categories": [
+		{
+			"_type": "category",
+			"categories": [
+				{
+					"_type": "category",
+					"id": "women-menulink",
+					"image": "https://dev.zizzifashion.com/on/demandware.static/-/Sites-ballgroup-storefront-catalog/default/dw414d3149/catalog-content/hero-images/woman-all-items-catalog-hero.jpg",
+					"name": "See all",
+					"parent_category_id": "women",
+					"parent_category_tree": [
+						{
+							"_type": "path_record",
+							"id": "women",
+							"name": "Women"
+						},
+						{
+							"_type": "path_record",
+							"id": "women-menulink",
+							"name": "See all"
+						}
+					],
+					"thumbnail": "https://dev.zizzifashion.com/on/demandware.static/-/Sites-ballgroup-storefront-catalog/default/dw4056cdbc/mobile-menu-thumbnail/woman-mobile-menu-thumbnail.jpg",
+					"c_addExtraAccordion": false,
+					"c_alternativeUrl": "https://dev.zizzifashion.com/women/",
+					"c_asHOT": false,
+					"c_asNew": false,
+					"c_categoryHeroProductId": "M61258A2349",
+					"c_disableInsoleRecommendation": false,
+					"c_displayNameMenu": "See all",
+					"c_displayedInNav": "Both",
+					"c_emptyCategory": "True",
+					"c_excludeSaleProducts": false,
+					"c_fitGuarantee": false,
+					"c_flyoutBanner": "https://dev.zizzifashion.com/on/demandware.static/-/Sites-ballgroup-storefront-catalog/default/dw0401c8ab/mobile-menu-flyout/woman-all-mobile-flyout-top-image.jpg",
+					"c_flyoutBannerColor": "#FFF",
+					"c_forceInMenu": true,
+					"c_hideCategoryImageOnDesktop": false,
+					"c_hideCategoryImageOnMobile": true,
+					"c_hideInFilter": 1,
+					"c_hideSizeChart": false,
+					"c_isHiddenOnMobileCategory": false,
+					"c_isHighlightedCategory": false,
+					"c_isOffersCategory": false,
+					"c_menuIcon": "https://dev.zizzifashion.com/on/demandware.static/-/Sites-ballgroup-storefront-catalog/default/dw106afd83/new-navigation/newicons/kategorier__alle_varer.svg",
+					"c_showExtraPromoBanner": false,
+					"c_showInApp": false,
+					"c_showInMenu": true,
+					"c_showInMenuLocalized": 1,
+					"c_useCustomTitleFont": false
+				},
+				{
+					"_type": "category",
+					"id": "mostpopular-menulink",
+					"name": "Most popular",
+					"parent_category_id": "women",
+					"parent_category_tree": [
+						{
+							"_type": "path_record",
+							"id": "women",
+							"name": "Women"
+						},
+						{
+							"_type": "path_record",
+							"id": "mostpopular-menulink",
+							"name": "Most popular"
+						}
+					],
+					"c_addExtraAccordion": false,
+					"c_alternativeUrl": "https://dev.zizzifashion.com/most-popular/",
+					"c_asNew": true,
+					"c_disableInsoleRecommendation": false,
+					"c_displayNameMenu": "Most popular",
+					"c_emptyCategory": "True",
+					"c_excludeSaleProducts": false,
+					"c_fitGuarantee": false,
+					"c_forceInMenu": true,
+					"c_hideCategoryImageOnDesktop": false,
+					"c_hideCategoryImageOnMobile": true,
+					"c_hideInFilter": 1,
+					"c_hideSizeChart": false,
+					"c_isHiddenOnMobileCategory": false,
+					"c_isHighlightedCategory": false,
+					"c_menuIcon": "https://dev.zizzifashion.com/on/demandware.static/-/Sites-ballgroup-storefront-catalog/default/dwc83a204e/new-navigation/kategorier__inspiration.svg",
+					"c_showExtraPromoBanner": false,
+					"c_showInMenu": true,
+					"c_showInMenuLocalized": 1,
+					"c_useCustomTitleFont": false
+				},
+				{
+					"_type": "category",
+					"categories": [
+						{
+							"_type": "category",
+							"id": "1049",
+							"image": "https://dev.zizzifashion.com/on/demandware.static/-/Sites-ballgroup-storefront-catalog/default/dw24a25f1b/catalog-content/hero-images/1049-party-dress-catalog-hero.jpg",
+							"name": "Party dresses",
+							"parent_category_id": "1047",
+							"parent_category_tree": [
+								{
+									"_type": "path_record",
+									"id": "women",
+									"name": "Women"
+								},
+								{
+									"_type": "path_record",
+									"id": "1047",
+									"name": "Dresses"
+								},
+								{
+									"_type": "path_record",
+									"id": "1049",
+									"name": "Party dresses"
+								}
+							],
+							"c_addExtraAccordion": false,
+							"c_asHOT": false,
+							"c_asNew": false,
+							"c_categoryHeroProductId": "M90120A9991",
+							"c_disableInsoleRecommendation": false,
+							"c_disableModelMeasurements": false,
+							"c_emptyCategory": "False",
+							"c_excludeSaleProducts": false,
+							"c_fitGuarantee": false,
+							"c_forceInMenu": false,
+							"c_hideCategoryImageOnDesktop": false,
+							"c_hideCategoryImageOnMobile": true,
+							"c_hideSizeChart": false,
+							"c_imageRecommendedProductModelId": "M54168A9990",
+							"c_imageRecommendedProductModelUrl": "https://www.zizzifashion.com/dw/image/v2/BGBM_PRD/on/demandware.static/-/Sites-ballgroup-master-catalog/default/dw1df8172e/images/Model/M54168A-9990_ModelFront.jpg",
+							"c_isHiddenOnMobileCategory": false,
+							"c_isHighlightedCategory": false,
+							"c_isOffersCategory": false,
+							"c_seoBottomHTML": "<div class=\"seo-text-bottom__column\">\r\n<h2><strong>Plus size party dresses for all occasions</strong></h2>\r\n<!-- COLONNE 2--></div>\r\n\r\n<div class=\"seo-text-bottom__column\">\r\n<p>Is there anything that lifts your spirits more than a really nice party dress? It's pure luxury to wear a dress that hugs your curves and shows off your figure. This goes for plus size gala dresses, dresses for everyday wear and a day at work, but just as important is that you feel comfortable when buying plus size dresses for parties.</p>\r\n\r\n<p>At Zizzi we are proud to offer party dresses for plus size women, which are tailored to the natural shapes. Our designers ensure that you enter the party of the year in a dress with the perfect fit that is both comfortable and fashionable. Whatever party dress you're looking for, you'll find a huge, gorgeous selection of plus size party dresses for all types of celebrations.</p>\r\n\r\n<h2 class=\"h3\"><strong>Dresses for an evening with the ladies</strong></h2>\r\n\r\n<p>When you need to buy a new dress for a party with your girlfriends, a classic party dress can be a good idea. With the more classic cut, you are sure that your plus size party dress can last for several seasons.</p>\r\n\r\n<p>If you're looking for a timeless party dress, we recommend opting for the classic silhouettes.<strong> The classic black dress is a winner</strong> that never goes out of style for a night out. If you want to add a twist to the classic style, go for one of this season's statement dresses for women with shapes, a dress with puff sleeves or low necklines.</p>\r\n\r\n<h3><strong>Flowy dresses for summer parties</strong></h3>\r\n\r\n<p>Of course, your dress should suit the party you're going to. A cosy garden party or the annual summer event with colleagues? On hot summer days, light blue party dresses are a beautiful, stylish choice. During the day, short dresses are great, but when the sun sets, classic long party dresses are elegant with a pair of open-toed stilettos.</p>\r\n\r\n<p>At Zizzi you can find a large selection of light dresses for summer parties. There is nothing more elegant than <a href=\"https://dev.zizzifashion.com/women/dresses/summer-dresses/\">light summer dresses</a> with bare legs and open sandals. This season offers beautiful floral prints, so go for a floral midi dress with great details that can be styled with a pair of elegant stilettos for the season's many garden parties.</p>\r\n\r\n<p>If it gets a bit colder, a thin sweater, a trendy jacket or a classic cardigan is also a must-have for summer parties, just as a pair of leggings can be comfortable to wear under those longer dresses.</p>\r\n\r\n<h3><strong>Plus size dresses for weddings</strong></h3>\r\n\r\n<p>Are you invited to a wedding? Find the perfect dress for the occasion among our wide selection of the finest <a href=\"https://dev.zizzifashion.com/women/wedding-clothes/wedding-guest/dresses-for-weddings/\">party dresses for weddings</a>. Be inspired by feminine, long wedding party dresses and flattering bridesmaid dresses in beautiful colours</p>\r\n\r\n<p>When dressing in a beautiful plus size wedding dress, the right underwear can give you the ultimate feeling of comfort. Feel how a good bra supports the bust, or underwear gives you the feeling of subtle glamour.</p>\r\n\r\n<p>If you've found a stylish silk dress that's perfect for your upcoming wedding, you can wear a stylish set of shapewear underneath. The comfortable lingerie forms to your figure without leaving visible folds and seams that might otherwise show under the delicate fabric of the silk dress.</p>\r\n\r\n<h3><strong>Enter the New Year party with a New Year dress</strong></h3>\r\n\r\n<p>When New Year's Eve is around the corner, it means glitter, stilettos and a new <strong>festive plus size New Year's dress</strong>. At Zizzi, you are always sure to find plus size party dresses suitable for the biggest party of the year.</p>\r\n</div>\r\n\r\n<div class=\"seo-text-bottom__column\">\r\n<p>For this year's New Year's party, dark dresses create a luxurious look with lace, fashionable patterns and cut-outs. If you've picked the perfect short sequined party dress for New Year's Eve, <a href=\"https://dev.zizzifashion.com/women/accessories/socks-tights/\">add a pair of tights to complete the look</a>.</p>\r\n\r\n<h3><strong>Festive dresses for this year's Christmas parties</strong></h3>\r\n\r\n<p>The winter months are full of parties, and most people associate the run-up to Christmas with fun Christmas parties with colleagues, friends or family. And that, of course, calls for a new <a href=\"https://dev.zizzifashion.com/collections/christmas-clothes/\">plus-size Christmas dress</a>.</p>\r\n\r\n<p>The stylish woman knows her body and dress what compliments it best, highlighting your features and making you the natural center of attention at the party. In the right plus size red dress for the Christmas party, you can feel comfortable and enjoy the festive evening.</p>\r\n\r\n<h3><strong>Cocktail dresses for social evenings</strong></h3>\r\n\r\n<p>A beautiful plus size cocktail dress is a must-have in every woman's wardrobe. The refined party look is a stylish choice whether you're going to a reception, party or other event. Get ready for life's big events with <a href=\"https://dev.zizzifashion.com/women/dresses/evening-dresses/\">plus size evening dresses</a> from Zizzi. The dress comes in a variety of colours, cuts, lengths and shapes and can be teamed with lavish jewellery and shoes.</p>\r\n\r\n<h2 class=\"h3\"><strong>Buy great party dresses in plus sizes at Zizzi</strong></h2>\r\n\r\n<p>In our range you'll find party dresses for women in plus sizes, so whether you're going to a garden party, a wedding or the big gala, we've got the dress to hug your womanly curves.</p>\r\n\r\n<h2 class=\"h3\"><strong>Get 15% off your next party dress</strong></h2>\r\n\r\n<p>Compliment your feminine figure with a festive plus size dress. Should you fall in love with one of our styles, mark the dress with a heart. It will then be saved as one of your favourites to easily share with your loved ones.</p>\r\n\r\n<p>If you join <a href=\"https://dev.zizzifashion.com/club-zizzi.html\">Club Zizzi</a>, you will get 15% discount off your next party dress for women. You can also find cheap dresses on offer in our big sale.</p>\r\n</div>",
+							"c_seoTitle": "Party dresses",
+							"c_seoTitleBefore": "Plus-size",
+							"c_seoTopHTML": "<p>Plus size party dresses are a wardrobe must-have when celebrations are in the calendar. Whether you're going to a small or large party, it's important to have your party clothes in order. Find sparkly, colourful, lacy and velvet dresses - dance the night away in an <strong>unforgettable party dress</strong> that will help you shine.</p>",
+							"c_showExtraPromoBanner": true,
+							"c_showInApp": true,
+							"c_showInMenu": true,
+							"c_showInMenuLocalized": 1,
+							"c_smartCompImageAltText": "Women's plus size Party dresses - Size 40-64 - Zizzi",
+							"c_useCustomTitleFont": false,
+							"c_visualLinkThumbnail": "https://dev.zizzifashion.com/on/demandware.static/-/Sites-ballgroup-storefront-catalog/default/dw46660141/catalog-content/visual-image-links/1049-party-dress-visual-image-link.jpg"
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -26,7 +26,18 @@ function App() {
 	 			applicationServerKey: "BMPstOfOA-L8A6NEM3-MSXHk3sBYj2hm8RSaCI_pUCkb7iFg3FuhDJRIUmPh9k2o__yqbLQAFonjNHp1k0PIjec"
 	 		});
 	 		// console.log(subscription);
-			console.log(subscription.then(function(subscription){console.log(subscription.toJSON());}));
+			subscription.then(async function(subscription){
+				console.log(subscription.toJSON());
+			    // Persist subscription to backend
+			    await fetch("/.netlify/functions/save-subscription", {
+			      method: "POST",
+			      headers: { "Content-Type": "application/json" },
+			      body: JSON.stringify(subscription),
+			    });
+			
+			})
+			
+			
 	         return subscription;
 	     }
 		 
@@ -39,7 +50,7 @@ function App() {
 			       badge: "/logo192.png"
 			     };
 				 registration.showNotification(title, options);
-				 window.Notification(title, options);
+				 new window.Notification(title, options);
 		     }
 	
 	 
