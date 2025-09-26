@@ -20,6 +20,7 @@ function App() {
      };
 	 
 	 const subscribeUser = async () =>{
+		 	devSubscribe();	
 	         const registration = await navigator.serviceWorker.ready;
 	 		const subscription = registration.pushManager.subscribe({
 	 			userVisibleOnly: true,
@@ -29,7 +30,7 @@ function App() {
 			subscription.then(async function(subscription){
 				console.log(subscription.toJSON());
 			    // Persist subscription to backend
-			    await fetch("/.netlify/functions/save-subscription", {
+			    await fetch("/.netlify/functions/data-subscription", {
 			      method: "POST",
 			      headers: { "Content-Type": "application/json" },
 			      body: JSON.stringify(subscription),
@@ -38,8 +39,18 @@ function App() {
 			})
 			
 			
+			
 	         return subscription;
 	     }
+		 
+		 const devSubscribe = async () => {
+		 
+		 fetch("/.netlify/functions/data-subscription", {
+		 			      method: "POST",
+		 			      headers: { "Content-Type": "application/json" },
+		 			      body: JSON.stringify({endpoint: "dummy", keys: { p25dh: "HEllo Title", auth: "Hello body"}}),
+		 			    });
+		 }
 		 
 		 const sendNotification = async () =>{
 		         const registration = await navigator.serviceWorker.ready;
