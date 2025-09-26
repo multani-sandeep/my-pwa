@@ -9,7 +9,7 @@ const supabase = createClient(
 	"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlza2JscHZ1dXdyZGxuemtldm1xIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg4OTUxNjAsImV4cCI6MjA3NDQ3MTE2MH0.JEyCHZYGLNnQat1VK-PZc3u9FOxCKaCF5mr6WfGmXcI"
 );
 
-exports.handler = async (event) => {
+export async function handler(event) {
 	try {
 		console.log(JSON.stringify(subscriptions));
 		if (event.httpMethod === "GET") {
@@ -25,7 +25,7 @@ exports.handler = async (event) => {
 		// TODO: Save subscription to a database (e.g., Fauna, DynamoDB, Supabase, or even a JSON file in dev)
 		console.log("Received subscription:", subscription);
 
-		const { error } = await supabase.from("subscriptions").upsert({
+		const { error } = await supabase.from("ecosubscriptions").upsert({
 		      endpoint: subscription.endpoint,
 		      p256dh: subscription.keys.p256dh,
 		      auth: subscription.keys.auth,
@@ -49,6 +49,7 @@ exports.handler = async (event) => {
 	}
 
 } catch (error) {
+	console.log(JSON.stringify(error));
 	return {
 		statusCode: 400,
 		body: JSON.stringify({
