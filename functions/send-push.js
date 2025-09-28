@@ -10,8 +10,8 @@ const supabase = createClient(
 // Set VAPID keys (generate with npx web-push generate-vapid-keys)
 webpush.setVapidDetails(
   "mailto:you@example.com",
-  process.env.VAPID_PUBLIC_KEY,
-  process.env.VAPID_PRIVATE_KEY
+  "BMPstOfOA-L8A6NEM3-MSXHk3sBYj2hm8RSaCI_pUCkb7iFg3FuhDJRIUmPh9k2o__yqbLQAFonjNHp1k0PIjec",
+  "ruaNl5H32tosZ6IpUcdZfdT4xv6-drE3hOFTESe1n34"
 );
 
 export async function handler(event) {
