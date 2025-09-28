@@ -31,12 +31,14 @@ function Home() {
 	 
 	 const subscribeUser = async () =>{
 		 	if(isLocalhostEnv)devSubscribe();
-	         const registration = await navigator.serviceWorker.ready;
+			console.log("Checking SW ready");
+	        const registration = await navigator.serviceWorker.ready;
+			console.log("SW ready !");
 	 		const subscription = registration.pushManager.subscribe({
 	 			userVisibleOnly: true,
 	 			applicationServerKey: "BMPstOfOA-L8A6NEM3-MSXHk3sBYj2hm8RSaCI_pUCkb7iFg3FuhDJRIUmPh9k2o__yqbLQAFonjNHp1k0PIjec"
 	 		});
-	 		// console.log(subscription);
+
 			subscription.then(async function(subscription){
 				console.log(subscription.toJSON());
 			    // Persist subscription to backend

@@ -9,8 +9,6 @@ const supabase = createClient(
 	"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlza2JscHZ1dXdyZGxuemtldm1xIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg4OTUxNjAsImV4cCI6MjA3NDQ3MTE2MH0.JEyCHZYGLNnQat1VK-PZc3u9FOxCKaCF5mr6WfGmXcI"
 );
 
-console.log(">> "+ supabase);
-
 export async function handler(event) {
 	try {
 		if (event.httpMethod === "GET") {
