@@ -1,8 +1,10 @@
-import React from 'react';
 import logo from './logo.svg';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import './App.css';
 
-function App() {
+
+function Home() {
 	
 	const isLocalhostEnv = Boolean(
 	  window.location.hostname === 'localhost' ||
@@ -120,11 +122,90 @@ function App() {
           onClick={sendNotification}
         >
           Send local Push notification
-        </button>	  	  
+        </button>	
+		<Link to="/manage"><button
+          style={{
+            padding: "10px 20px",
+            fontSize: "16px",
+            borderRadius: "8px",
+            cursor: "pointer",
+          }}
+          
+        >Manage subscriptions
+        </button></Link>
       </header>
    
     </div>
   );
 }
 
-export default App;
+
+
+function ManageSubscriptions() {
+  const [subs, setSubs] = useState([]);
+  const [selected, setSelected] = useState("all");
+  const [message, setMessage] = useState("Hello from PWA!");
+
+  useEffect(() => {
+    fetch("/.netlify/functions/data-subscription")
+      .then((res) => res.json())
+      .then((data) => setSubs(data));
+  }, []);
+
+  const sendPush = async () => {
+    const response = await fetch("/.netlify/functions/send-push", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        target: selected,
+        message,
+      }),
+    });
+
+    if (response.ok) {
+      alert("Push sent successfully");
+    } else {
+      alert("Failed to send push");
+    }
+  };
+
+  return (
+    <div>
+      <h2>Manage Subscriptions</h2>
+      <label>
+        Select subscription:
+        <select value={selected} onChange={(e) => setSelected(e.target.value)}>
+          <option value="all">All</option>
+          {subs.map((s) => (
+            <option key={s.id} value={s.endpoint}>
+              {s.endpoint.slice(0, 40)}...
+            </option>
+          ))}
+        </select>
+      </label>
+      <br />
+      <label>
+        Message:
+        <input
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          style={{ width: "300px" }}
+        />
+      </label>
+      <br />
+      <button onClick={sendPush}>Send Push</button><br/>
+	  <Link to="/">Go back</Link>  	  
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/manage" element={<ManageSubscriptions />} />
+      </Routes>
+    </Router>
+  );
+}
