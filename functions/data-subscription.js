@@ -9,15 +9,22 @@ const supabase = createClient(
 	"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlza2JscHZ1dXdyZGxuemtldm1xIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg4OTUxNjAsImV4cCI6MjA3NDQ3MTE2MH0.JEyCHZYGLNnQat1VK-PZc3u9FOxCKaCF5mr6WfGmXcI"
 );
 
+console.log(">> "+ supabase);
+
 export async function handler(event) {
 	try {
-		console.log(JSON.stringify(subscriptions));
 		if (event.httpMethod === "GET") {
 			// Return all subscriptions
-			return {
-				statusCode: 200,
-				body: JSON.stringify(subscriptions),
-			};
+			const { data, error } = await supabase.from("ecosubscriptions").select("*");
+
+			  if (error) {
+			    return { statusCode: 500, body: JSON.stringify({ error: error.message }) };
+			  }
+
+			  return {
+			    statusCode: 200,
+			    body: JSON.stringify(data),
+			  };
 		} else if (event.httpMethod === "POST") {
 
 
@@ -49,7 +56,7 @@ export async function handler(event) {
 	}
 
 } catch (error) {
-	console.log(JSON.stringify(error));
+	console.log("error> " + JSON.stringify(error));
 	return {
 		statusCode: 400,
 		body: JSON.stringify({

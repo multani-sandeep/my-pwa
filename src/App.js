@@ -4,6 +4,14 @@ import './App.css';
 
 function App() {
 	
+	const isLocalhostEnv = Boolean(
+	  window.location.hostname === 'localhost' ||
+	    // [::1] is the IPv6 localhost address.
+	    window.location.hostname === '[::1]' ||
+	    // 127.0.0.0/8 are considered localhost for IPv4.
+	    window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
+	);
+	
     const requestNotificationPermission = async () => {
        try {
          const permission = await Notification.requestPermission();
@@ -20,7 +28,7 @@ function App() {
      };
 	 
 	 const subscribeUser = async () =>{
-		 	devSubscribe();	
+		 	if(isLocalhostEnv)devSubscribe();
 	         const registration = await navigator.serviceWorker.ready;
 	 		const subscription = registration.pushManager.subscribe({
 	 			userVisibleOnly: true,
@@ -48,7 +56,7 @@ function App() {
 		 fetch("/.netlify/functions/data-subscription", {
 		 			      method: "POST",
 		 			      headers: { "Content-Type": "application/json" },
-		 			      body: JSON.stringify({endpoint: "dummy", keys: { p25dh: "HEllo Title", auth: "Hello body"}}),
+		 			      body: JSON.stringify({endpoint: "dummy", keys: { p256dh: "HEllo Title", auth: "Hello body"}}),
 		 			    });
 		 }
 		 
