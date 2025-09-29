@@ -39,7 +39,11 @@
       "react-app/jest"
     ]
   },
-/*  "browserslist": {
+  "devDependencies": {
+    "ajv": "^8.12.0",
+    "react-scripts": "^5.0.1"
+  },
+  "browserslist": {
     "production": [
       ">0.2%",
       "not dead",
@@ -50,9 +54,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },*/
-  "devDependencies": {
-    "ajv": "^8.12.0",
-    "react-scripts": "^5.0.1"
   }
 }
