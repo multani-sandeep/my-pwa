@@ -30,7 +30,6 @@ function Home() {
      };
 	 
 	 const subscribeUser = async () =>{
-		 	if(isLocalhostEnv)devSubscribe();
 			console.log("Checking SW ready");
 	        const registration = await navigator.serviceWorker.ready;
 			console.log("SW ready !");
